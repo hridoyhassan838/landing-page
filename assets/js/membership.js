@@ -5,7 +5,7 @@ const paidPlans = [
     features: [
       "Access to the gym from 8:00 to 14:00",
       "The trainer on duty will introduce you to the gym",
-    ]
+    ],
   },
   {
     name: "Pass 'Easy Start'",
@@ -15,7 +15,7 @@ const paidPlans = [
       "Individual training program",
       "Access to the VTRAINER application",
       "Trainer support",
-    ]
+    ],
   },
   {
     name: "Pass 'Free Time'",
@@ -24,7 +24,7 @@ const paidPlans = [
       "The entrance time to the gym is from 14:00 to 16:00",
       "Without suspension of gym membership",
       "The trainer on duty will introduce you to the gym",
-    ]
+    ],
   },
   {
     name: "Pass '1 Month 24/7'",
@@ -32,7 +32,7 @@ const paidPlans = [
     features: [
       "Visit without restrictions 24/7",
       "The trainer on duty will introduce you to the gym",
-    ]
+    ],
   },
   {
     name: "Pass 'In Shape (AM)'",
@@ -42,7 +42,7 @@ const paidPlans = [
       "Without suspension of gym membership",
       "Classes with a trainer in a mini-group 3 times a week",
       "Trainer support",
-    ]
+    ],
   },
   {
     name: "Pass 'In Shape (PM)'",
@@ -52,31 +52,39 @@ const paidPlans = [
       "Without suspension of gym membership",
       "Classes with a trainer in a mini-group 3 times a week",
       "Trainer support",
-    ]
-  }
+    ],
+  },
 ];
 
 // Function to render paid plans
 function renderPaidPlans() {
   const membershipGrid = document.getElementById("membershipPlans");
-  
-  membershipGrid.innerHTML = paidPlans.map(plan => `
+
+  membershipGrid.innerHTML = paidPlans
+    .map(
+      (plan) => `
     <div class="membership-card">
       <h3>${plan.name}</h3>
       <div class="price">${plan.price}</div>
       <ul class="features-list">
-  ${plan.features.map(feature => `
+  ${plan.features
+    .map(
+      (feature) => `
           <li>
-  <img src="assets/icons/check.svg" alt="check icon">
+  <img src="assets/images/check-icon.png" alt="check icon">
             <span>${feature}</span>
           </li>
-        `).join('')}
+        `,
+    )
+    .join("")}
       </ul>
       <button class="buy-btn">Buy</button>
     </div>
-  `).join('');
+  `,
+    )
+    .join("");
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   renderPaidPlans();
 });
