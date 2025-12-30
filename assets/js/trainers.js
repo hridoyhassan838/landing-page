@@ -1,18 +1,49 @@
 const trainers = [
-  { name: "Victoria Shurpik", image: "assets/images/trainer-1.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Elizabeth Lavrinenko", image: "assets/images/trainer-2.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Ivan Gladkikh", image: "assets/images/trainer-3.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Vladislav Kovalenko", image: "assets/images/trainer-4.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Olga Kovalenko", image: "assets/images/trainer-5.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Dmitry Petrov", image: "assets/images/trainer-6.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Anna Volkova", image: "assets/images/trainer-7.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
-  { name: "Mikhail Sokolov", image: "assets/images/trainer-8.png", social: { instagram: "#", twitter: "#", youtube: "#" } },
+  {
+    name: 'Victoria Shurpik',
+    image: 'assets/images/trainer-1.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Elizabeth Lavrinenko',
+    image: 'assets/images/trainer-2.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Ivan Gladkikh',
+    image: 'assets/images/trainer-3.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Vladislav Kovalenko',
+    image: 'assets/images/trainer-4.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Olga Kovalenko',
+    image: 'assets/images/trainer-5.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Dmitry Petrov',
+    image: 'assets/images/trainer-6.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Anna Volkova',
+    image: 'assets/images/trainer-7.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
+  {
+    name: 'Mikhail Sokolov',
+    image: 'assets/images/trainer-8.png',
+    social: { instagram: '#', twitter: '#', youtube: '#' },
+  },
 ];
-
 
 // ✅ Create a single reusable function (Card + Render + Animation)
 function renderTrainers() {
-  const trainersGrid = document.getElementById("trainersGrid");
+  const trainersGrid = document.getElementById('trainersGrid');
 
   trainersGrid.innerHTML = trainers
     .map(
@@ -34,18 +65,17 @@ function renderTrainers() {
       </div>
     `
     )
-    .join("");
+    .join('');
 
   // ScrollReveal animation
-  ScrollReveal().reveal(".trainer-card", {
+  ScrollReveal().reveal('.trainer-card', {
     delay: 300,
-    distance: "35px",
-    origin: "bottom",
+    distance: '35px',
+    origin: 'bottom',
     interval: 150,
     scale: 0.9,
   });
 }
 
-
 // Run automatically after document load
-document.addEventListener("DOMContentLoaded", renderTrainers);
+document.addEventListener('DOMContentLoaded', renderTrainers);
