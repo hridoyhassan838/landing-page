@@ -53,13 +53,13 @@ function renderTrainers() {
         <h3>${t.name}</h3>
         <div class="social-links">
           <a href="${t.social.instagram}" class="social-icon">
-            <img src="assets/images/instagram.png" alt="Instagram">
+            <img src="assets/images/icons/instagram.png" alt="Instagram">
           </a>
           <a href="${t.social.twitter}" class="social-icon">
-            <img src="assets/images/twitter.png" alt="Twitter">
+            <img src="assets/images/icons/twitter.png" alt="Twitter">
           </a>
           <a href="${t.social.youtube}" class="social-icon">
-            <img src="assets/images/youtube.png" alt="YouTube">
+            <img src="assets/images/icons/youtube.png" alt="YouTube">
           </a>
         </div>
       </div>

@@ -71,7 +71,7 @@ function renderPaidPlans() {
     .map(
       (feature) => `
           <li>
-  <img src="assets/images/check-icon.png" alt="check icon">
+  <img src="assets/images/icons/check-icon.png" alt="check icon">
             <span>${feature}</span>
           </li>
         `
